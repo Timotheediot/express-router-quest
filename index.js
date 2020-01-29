@@ -1,13 +1,11 @@
 const express = require('express');
-const fakePosts = require('./routes/posts');
-const comments = require('./routes/comments')
-
-
 const app = express();
-const port = 8000;
 
-app.use('/api/comments', comments)
-app.use('/api/posts', fakePosts)
+const port = 8000;
+const api = require('./routes');
+
+app.use('/api', api);
+
 
 app.listen(port, (err) => {
   if (err) {

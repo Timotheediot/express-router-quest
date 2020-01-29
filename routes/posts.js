@@ -1,7 +1,8 @@
 // routes/posts.js
 const express = require('express');
-const fakePosts = require('../data/posts');
+const fakePosts = require('../data/posts')
 const router = express.Router();
+
 
 
 // Get a list of posts
